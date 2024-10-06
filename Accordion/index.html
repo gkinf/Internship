@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Descriptions Accordion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="accordion-container">
+    <h2>Job Titles and Descriptions</h2>
+
+    <!-- Accordion Item -->
+    <div class="accordion-item">
+        <div class="title-and-copy">
+            <button class="accordion" onclick="toggleAccordion(this)">Remote Business Growth Strategist</button>
+            <button class="copy-btn-title" onclick="copyTitle('Remote Business Growth Strategist')">Copy Title</button>
+        </div>
+        <div class="panel">
+            <div class="desc-options">
+
+                <button class="change-desc-btn" onclick="enableEditDesc('desc1')">Change Desc</button>
+                <button class="copy-desc-btn" onclick="copyDesc('desc1', this)">Copy Desc</button>
+            </div>
+            <div id="desc1">
+            <p contenteditable="false"><strong>Join a dynamic company that values innovation and excellence. 
+                Whether you are an experienced sales professional or a newcomer, this remote role offers flexibility and the 
+                opportunity to ignite your career. Maximize your earning potential with our support and embark on a fulfilling career path.</strong>
+             <strong> Key Responsibilities:</strong><ul>
+              <li>Collaborate with experienced mentors and thrive in a supportive team environment.</li>
+              <li>Contact prospective clients via phone to understand their needs.</li>
+              <li>Arrange and lead virtual consultations (via Zoom or phone) for detailed client discussions.</li>
+              <li>Create customized insurance quotes tailored to individual client needs.</li>
+              <li>Deliver compelling presentations to close sales and provide personalized solutions.</li></ul>
+             <strong> What We Offer:</strong><ul>
+              <li>A 3-4 day work schedule for an ideal work-life balance.</li>
+              <li>Free, comprehensive online training and ongoing support.</li>
+              <li>Focus on warm leads only, with no cold calling.</li>
+              <li>Fast commission payouts with minimal waiting times.</li>
+              <li>Advanced sales technology provided at no cost.</li>
+              <li>Ongoing professional development with mentorship from industry experts.</li>
+              <li>All-expenses-paid annual incentive trips to top global destinations.</li></ul>
+              <strong>This is a 1099 commission-based role specializing in financial products such as IULs, annuities, and life insurance, perfect for those looking to expand their expertise and impact.</strong></p>
+              <p>Ready to transform your sales career? Apply now and join a team dedicated to your professional growth and success
+              .</p></div>
+          </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="title-and-copy">
+            <button class="accordion" onclick="toggleAccordion(this)"> Virtual Sales Navigator</button>
+            <button class="copy-btn-title" onclick="copyTitle(' Virtual Sales Navigator')">Copy Title</button>
+        </div>
+        <div class="panel">
+            <div class="desc-options">
+
+                <button class="change-desc-btn" onclick="enableEditDesc('desc2')">Change Desc</button>
+                <button class="copy-desc-btn" onclick="copyDesc('desc2', this)">Copy Desc</button>
+            </div>
+            <div id="desc2">
+            <p contenteditable="false"><strong>Take the next step in your career with a forward-thinking company that values growth and success. This remote role is perfect for both seasoned sales professionals and those new to the industry. 
+                Benefit from outstanding support and maximize your earning potential with us.</strong>
+             <strong> Key Responsibilities:</strong><ul>
+              <li>Work closely with experienced mentors in a supportive team environment.</li>
+              <li>Reach out to potential clients by phone to understand their insurance needs.</li>
+              <li>Schedule and conduct virtual consultations (via Zoom or phone) for detailed discussions.</li>
+              <li>Create personalized insurance quotes to meet individual client requirements..</li>
+              <li>Present persuasive sales presentations to secure sales and provide customized solutions..</li></ul>
+             <strong> What We Offer:</strong><ul>
+              <li>A streamlined 3-4 day workweek for improved work-life balance.</li>
+              <li>Free, comprehensive online training and continuous support.</li>
+              <li>Work exclusively with warm leads, no cold calling required.</li>
+              <li>Quick commission payouts with minimal delays.</li>
+              <li>Cutting-edge sales technology provided at no charge.</li>
+              <li>Ongoing professional development with guidance from industry experts.</li>
+              <li>	All-expenses-paid annual incentive trips to premier global destinations.</li></ul>
+              <strong>This is a 1099 commission-based role specializing in financial products such as IULs, annuities, and life insurance, perfect for those looking to expand their expertise and impact.</strong></p>
+              <p>Ready to transform your sales career? Apply now and join a team dedicated to your professional growth and success
+              .</p></div>
+          </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="title-and-copy">
+            <button class="accordion" onclick="toggleAccordion(this)"> Remote Sales Operations Specialist</button>
+            <button class="copy-btn-title" onclick="copyTitle(' Virtual Sales Navigator')">Copy Title</button>
+        </div>
+        <div class="panel">
+            <div class="desc-options">
+
+                <button class="change-desc-btn" onclick="enableEditDesc('desc3')">Change Desc</button>
+                <button class="copy-desc-btn" onclick="copyDesc('desc3', this)">Copy Desc</button>
+            </div>
+            <div id="desc3">
+            <p contenteditable="false"><strong>Join a forward-thinking company that champions excellence. This remote role is perfect for both experienced sales professionals and ambitious newcomers. 
+                Enjoy flexibility, exceptional support, and the opportunity to boost your career.</strong>
+             <strong> Key Responsibilities:</strong><ul>
+                    <li>Engage with expert mentors and thrive in a supportive team environment.</li>
+                    <li>Connect with prospective clients via phone to understand their financial needs.</li>
+                    <li>Organize and conduct virtual consultations (via Zoom or phone) for comprehensive discussions.</li>
+                    <li>Craft personalized insurance quotes tailored to individual client needs.</li>
+                    <li>Execute persuasive presentations to close sales and offer tailored solutions.</li>
+                </ul>
+                
+             <strong> What We Offer:</strong>
+             <ul>
+                <li>A balanced 3-4 day workweek for optimal work-life harmony.</li>
+                <li>Free, extensive online training and ongoing support.</li>
+                <li>Work exclusively with warm leads, no cold calling required.</li>
+                <li>Prompt commission payouts with minimal waiting periods.</li>
+                <li>Advanced sales technology provided at no cost.</li>
+                <li>Continuous professional development with mentorship from industry veterans.</li>
+                <li>All-expenses-paid annual incentive trips to top-tier global destinations.</li>
+            </ul>
+            
+              <strong>This is a 1099 commission-based role specializing in financial products such as IULs, annuities, and life insurance, perfect for those looking to expand their expertise and impact.</strong></p>
+              <p>Ready to transform your sales career? Apply now and join a team dedicated to your professional growth and success
+              .</p></div>
+          </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="title-and-copy">
+            <button class="accordion" onclick="toggleAccordion(this)">Online Customer Engagement Expert</button>
+            <button class="copy-btn-title" onclick="copyTitle('Online Customer Engagement Expert ')">Copy Title</button>
+        </div>
+        <div class="panel">
+            <div class="desc-options">
+
+                <button class="change-desc-btn" onclick="enableEditDesc('desc4')">Change Desc</button>
+                <button class="copy-desc-btn" onclick="copyDesc('desc4', this)">Copy Desc</button>
+            </div>
+            <div id="desc4">
+            <p contenteditable="false"><strong>Join a pioneering company that values creativity and excellence. This remote role is perfect for both seasoned sales professionals and enthusiastic newcomers. 
+                Experience flexibility and unleash your earning potential with our dedicated support, all while building a rewarding career.</strong>
+             <strong> Key Responsibilities:</strong>
+             <ul>
+                <li>Collaborate with seasoned mentors and grow within a supportive team.</li>
+                <li>Reach out to potential clients by phone to understand their needs.</li>
+                <li>Schedule and conduct virtual consultations (via Zoom or phone) to discuss client requirements in detail.</li>
+                <li>Develop customized insurance quotes tailored to individual needs.</li>
+                <li>Deliver persuasive presentations to close sales and offer tailored solutions.</li>
+            </ul>
+            
+             <strong> What We Offer:</strong><ul>
+                <li>A 3-4 day workweek designed for a better work-life balance.</li>
+                <li>Free, comprehensive online training with continuous support.</li>
+                <li>Exclusive focus on warm leads, eliminating cold calling.</li>
+                <li>Fast commission payouts with minimal waiting times.</li>
+                <li>State-of-the-art sales technology provided at no cost.</li>
+                <li>Ongoing professional development with mentorship from industry leaders.</li>
+                <li>All-expenses-paid annual incentive trips to global destinations.</li>
+            </ul>
+            
+              <strong>This is a 1099 commission-based role specializing in financial products such as IULs, annuities, and life insurance, perfect for those looking to expand their expertise and impact.</strong></p>
+              <p>Ready to transform your sales career? Apply now and join a team dedicated to your professional growth and success
+              .</p></div>
+          </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="title-and-copy">
+            <button class="accordion" onclick="toggleAccordion(this)">Virtual Market Expansion Consultant</button>
+            <button class="copy-btn-title" onclick="copyTitle('Virtual Market Expansion Consultant')">Copy Title</button>
+        </div>
+        <div class="panel">
+            <div class="desc-options">
+
+                <button class="change-desc-btn" onclick="enableEditDesc('desc5')">Change Desc</button>
+                <button class="copy-desc-btn" onclick="copyDesc('desc5', this)">Copy Desc</button>
+            </div>
+            <div id="desc5">
+            <p contenteditable="false"><strong>Elevate your career with an innovative company that prioritizes your growth and success. This remote role is ideal for both experienced sales professionals and those new to the industry. 
+                Benefit from our unparalleled support and maximize your earning potential.</strong>
+             <strong> Key Responsibilities:</strong>
+             <ul>
+                <li>Work closely with experienced mentors in a supportive team environment.</li>
+                <li>Reach out to potential clients by phone to understand their insurance needs.</li>
+                <li>Schedule and conduct virtual consultations (via Zoom or phone) for detailed discussions.</li>
+                <li>Create personalized insurance quotes to meet individual client requirements.</li>
+                <li>Present persuasive sales presentations to secure sales and provide customized solutions.</li>
+            </ul>
+            
+             <strong> What We Offer:</strong>
+             <ul>
+                <li>A structured 3-4 day workweek to enhance work-life balance.</li>
+                <li>Free, comprehensive online training and ongoing support.</li>
+                <li>Focus exclusively on warm leads, no cold calling required.</li>
+                <li>Quick commission payouts with minimal delays.</li>
+                <li>Advanced sales technology provided at no charge.</li>
+                <li>Continuous professional development with guidance from industry experts.</li>
+                <li>All-expenses-paid annual incentive trips to prime global destinations.</li>
+            </ul>
+            
+              <strong>This is a 1099 commission-based role specializing in financial products such as IULs, annuities, and life insurance, perfect for those looking to expand their expertise and impact.</strong></p>
+              <p>Ready to transform your sales career? Apply now and join a team dedicated to your professional growth and success
+              .</p></div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <div class="title-and-copy">
+            <button class="accordion" onclick="toggleAccordion(this)">Remote Sales Advisor</button>
+            <button class="copy-btn-title" onclick="copyTitle('Remote Sales Advisor')">Copy Title</button>
+        </div>
+        <div class="panel">
+            <div class="desc-options">
+
+                <button class="change-desc-btn" onclick="enableEditDesc('desc6')">Change Desc</button>
+                <button class="copy-desc-btn" onclick="copyDesc('desc6', this)">Copy Desc</button>
+            </div>
+            <div id="desc6">
+            <p contenteditable="false"><strong>Join a forward-thinking company that values excellence and innovation. This remote role is ideal for both experienced sales professionals and ambitious newcomers. 
+                Enjoy flexibility, exceptional support, and the opportunity to advance your career.</strong>
+             <strong> Key Responsibilities:</strong>
+             <ul>
+                <li>Engage with expert mentors and thrive in a supportive team environment.</li>
+                <li>Connect with prospective clients via phone to understand their financial needs.</li>
+                <li>Organize and conduct virtual consultations (via Zoom or phone) for in-depth client discussions.</li>
+                <li>Craft personalized insurance quotes tailored to each client's needs.</li>
+                <li>Execute compelling presentations to close sales and provide customized solutions.</li>
+            </ul>
+            <strong>What We Offer:</strong>
+            <ul>
+                <li>A balanced 3-4 day workweek for optimal work-life harmony.</li>
+                <li>Free, extensive online training and ongoing support.</li>
+                <li>Work exclusively with warm leads, avoiding cold calling.</li>
+                <li>Prompt commission payouts with minimal waiting periods.</li>
+                <li>Cutting-edge sales technology provided at no cost.</li>
+                <li>Continuous professional development with mentorship from industry veterans.</li>
+                <li>All-expenses-paid annual incentive trips to premier global destinations.</li>
+            </ul>
+            
+              <strong>This is a 1099 commission-based role specializing in financial products such as IULs, annuities, and life insurance, perfect for those looking to expand their expertise and impact.</strong></p>
+              <p>Ready to transform your sales career? Apply now and join a team dedicated to your professional growth and success
+              .</p></div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <div class="title-and-copy">
+            <button class="accordion" onclick="toggleAccordion(this)">Digital Client Relations Manager</button>
+            <button class="copy-btn-title" onclick="copyTitle(' Digital Client Relations Manager')">Copy Title</button>
+        </div>
+        <div class="panel">
+            <div class="desc-options">
+
+                <button class="change-desc-btn" onclick="enableEditDesc('desc7')">Change Desc</button>
+                <button class="copy-desc-btn" onclick="copyDesc('desc7', this)">Copy Desc</button>
+            </div>
+            <div id="desc7">
+            <p contenteditable="false"><strong>Be part of an innovative company that champions growth and excellence. This remote role offers the flexibility to experienced sales professionals and motivated newcomers alike. 
+                Enjoy exceptional support and maximize your earning potential in a fulfilling career path.</strong>
+             <strong> Key Responsibilities:</strong>
+             <ul>
+                <li>Collaborate with seasoned mentors and excel in a supportive team setting.</li>
+                <li>Initiate client interactions via phone to understand their needs.</li>
+                <li>Schedule and lead virtual consultations (via Zoom or phone) for comprehensive discussions.</li>
+                <li>Design personalized insurance quotes to meet each client's needs.</li>
+                <li>Present effective solutions to close sales and provide customized insurance plans.</li>
+            </ul>
+            
+             <strong> What We Offer:</strong>
+             <ul>
+                <li>A flexible 3-4 day workweek for better work-life balance.</li>
+                <li>Free, extensive online training and continuous support.</li>
+                <li>Work exclusively with warm leads, no cold calling necessary.</li>
+                <li>Rapid commission payouts with minimal waiting periods.</li>
+                <li>State-of-the-art sales technology provided at no cost.</li>
+                <li>Ongoing professional development with mentorship from industry leaders.</li>
+                <li>All-expenses-paid annual incentive trips to top global destinations.</li>
+            </ul>
+            
+              <strong>This is a 1099 commission-based role specializing in financial products such as IULs, annuities, and life insurance, perfect for those looking to expand their expertise and impact.</strong></p>
+              <p>Ready to transform your sales career? Apply now and join a team dedicated to your professional growth and success
+              .</p></div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <div class="title-and-copy">
+            <button class="accordion" onclick="toggleAccordion(this)"> Online Sales Innovator</button>
+            <button class="copy-btn-title" onclick="copyTitle(' Online Sales Innovator')">Copy Title</button>
+        </div>
+        <div class="panel">
+            <div class="desc-options">
+
+                <button class="change-desc-btn" onclick="enableEditDesc('desc8')">Change Desc</button>
+                <button class="copy-desc-btn" onclick="copyDesc('desc8', this)">Copy Desc</button>
+            </div>
+            <div id="desc8">
+            <p contenteditable="false"><strong>Take the next step in your career with a forward-thinking company that values growth and success. This remote role is perfect for both seasoned sales professionals and those new to the industry. 
+                Benefit from outstanding support and maximize your earning potential with us.</strong>
+             <strong> Key Responsibilities:</strong><ul>
+              <li>Work closely with experienced mentors in a supportive team environment.</li>
+              <li>Reach out to potential clients by phone to understand their insurance needs.</li>
+              <li>Schedule and conduct virtual consultations (via Zoom or phone) for detailed discussions.</li>
+              <li>Create personalized insurance quotes to meet individual client requirements..</li>
+              <li>Present persuasive sales presentations to secure sales and provide customized solutions..</li></ul>
+             <strong> What We Offer:</strong><ul>
+              <li>A streamlined 3-4 day workweek for improved work-life balance.</li>
+              <li>Free, comprehensive online training and continuous support.</li>
+              <li>Work exclusively with warm leads, no cold calling required.</li>
+              <li>Quick commission payouts with minimal delays.</li>
+              <li>Cutting-edge sales technology provided at no charge.</li>
+              <li>Ongoing professional development with guidance from industry experts.</li>
+              <li>	All-expenses-paid annual incentive trips to premier global destinations.</li></ul>
+              <strong>This is a 1099 commission-based role specializing in financial products such as IULs, annuities, and life insurance, perfect for those looking to expand their expertise and impact.</strong></p>
+              <p>Ready to transform your sales career? Apply now and join a team dedicated to your professional growth and success
+              .</p></div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <div class="title-and-copy">
+            <button class="accordion" onclick="toggleAccordion(this)">Remote Sales Architect</button>
+            <button class="copy-btn-title" onclick="copyTitle('Remote Sales Architect')">Copy Title</button>
+        </div>
+        <div class="panel">
+            <div class="desc-options">
+
+                <button class="change-desc-btn" onclick="enableEditDesc('desc9')">Change Desc</button>
+                <button class="copy-desc-btn" onclick="copyDesc('desc9', this)">Copy Desc</button>
+            </div>
+            <div id="desc9">
+            <p contenteditable="false"><strong>Take the next step in your career with a forward-thinking company that values growth and success. This remote role is perfect for both seasoned sales professionals and those new to the industry. 
+                Benefit from outstanding support and maximize your earning potential with us.</strong>
+             <strong> Key Responsibilities:</strong><ul>
+              <li>Work closely with experienced mentors in a supportive team environment.</li>
+              <li>Reach out to potential clients by phone to understand their insurance needs.</li>
+              <li>Schedule and conduct virtual consultations (via Zoom or phone) for detailed discussions.</li>
+              <li>Create personalized insurance quotes to meet individual client requirements..</li>
+              <li>Present persuasive sales presentations to secure sales and provide customized solutions..</li></ul>
+             <strong> What We Offer:</strong><ul>
+              <li>A streamlined 3-4 day workweek for improved work-life balance.</li>
+              <li>Free, comprehensive online training and continuous support.</li>
+              <li>Work exclusively with warm leads, no cold calling required.</li>
+              <li>Quick commission payouts with minimal delays.</li>
+              <li>Cutting-edge sales technology provided at no charge.</li>
+              <li>Ongoing professional development with guidance from industry experts.</li>
+              <li>	All-expenses-paid annual incentive trips to premier global destinations.</li></ul>
+              <strong>This is a 1099 commission-based role specializing in financial products such as IULs, annuities, and life insurance, perfect for those looking to expand their expertise and impact.</strong></p>
+              <p>Ready to transform your sales career? Apply now and join a team dedicated to your professional growth and success
+              .</p></div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <div class="title-and-copy">
+            <button class="accordion" onclick="toggleAccordion(this)">Virtual Sales Development Specialist</button>
+            <button class="copy-btn-title" onclick="copyTitle('Virtual Sales Development Specialist')">Copy Title</button>
+        </div>
+        <div class="panel">
+            <div class="desc-options">
+
+                <button class="change-desc-btn" onclick="enableEditDesc('desc10')">Change Desc</button>
+                <button class="copy-desc-btn" onclick="copyDesc('desc10', this)">Copy Desc</button>
+            </div>
+            <div id="desc10">
+            <p contenteditable="false"><strong>Take the next step in your career with a forward-thinking company that values growth and success. This remote role is perfect for both seasoned sales professionals and those new to the industry. 
+                Benefit from outstanding support and maximize your earning potential with us.</strong>
+             <strong> Key Responsibilities:</strong><ul>
+              <li>Work closely with experienced mentors in a supportive team environment.</li>
+              <li>Reach out to potential clients by phone to understand their insurance needs.</li>
+              <li>Schedule and conduct virtual consultations (via Zoom or phone) for detailed discussions.</li>
+              <li>Create personalized insurance quotes to meet individual client requirements..</li>
+              <li>Present persuasive sales presentations to secure sales and provide customized solutions..</li></ul>
+             <strong> What We Offer:</strong><ul>
+              <li>A streamlined 3-4 day workweek for improved work-life balance.</li>
+              <li>Free, comprehensive online training and continuous support.</li>
+              <li>Work exclusively with warm leads, no cold calling required.</li>
+              <li>Quick commission payouts with minimal delays.</li>
+              <li>Cutting-edge sales technology provided at no charge.</li>
+              <li>Ongoing professional development with guidance from industry experts.</li>
+              <li>	All-expenses-paid annual incentive trips to premier global destinations.</li></ul>
+              <strong>This is a 1099 commission-based role specializing in financial products such as IULs, annuities, and life insurance, perfect for those looking to expand their expertise and impact.</strong></p>
+              <p>Ready to transform your sales career? Apply now and join a team dedicated to your professional growth and success
+              .</p></div>
+          </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="title-and-copy">
+            <button class="accordion" onclick="toggleAccordion(this)">Online Market Penetration Expert</button>
+            <button class="copy-btn-title" onclick="copyTitle(' Online Market Penetration Expert')">Copy Title</button>
+        </div>
+        <div class="panel">
+            <div class="desc-options">
+
+                <button class="change-desc-btn" onclick="enableEditDesc('desc11')">Change Desc</button>
+                <button class="copy-desc-btn" onclick="copyDesc('desc11', this)">Copy Desc</button>
+            </div>
+            <div id="desc11">
+            <p contenteditable="false"><strong>Take the next step in your career with a forward-thinking company that values growth and success. This remote role is perfect for both seasoned sales professionals and those new to the industry. 
+                Benefit from outstanding support and maximize your earning potential with us.</strong>
+             <strong> Key Responsibilities:</strong><ul>
+              <li>Work closely with experienced mentors in a supportive team environment.</li>
+              <li>Reach out to potential clients by phone to understand their insurance needs.</li>
+              <li>Schedule and conduct virtual consultations (via Zoom or phone) for detailed discussions.</li>
+              <li>Create personalized insurance quotes to meet individual client requirements..</li>
+              <li>Present persuasive sales presentations to secure sales and provide customized solutions..</li></ul>
+             <strong> What We Offer:</strong><ul>
+              <li>A streamlined 3-4 day workweek for improved work-life balance.</li>
+              <li>Free, comprehensive online training and continuous support.</li>
+              <li>Work exclusively with warm leads, no cold calling required.</li>
+              <li>Quick commission payouts with minimal delays.</li>
+              <li>Cutting-edge sales technology provided at no charge.</li>
+              <li>Ongoing professional development with guidance from industry experts.</li>
+              <li>	All-expenses-paid annual incentive trips to premier global destinations.</li></ul>
+              <strong>This is a 1099 commission-based role specializing in financial products such as IULs, annuities, and life insurance, perfect for those looking to expand their expertise and impact.</strong></p>
+              <p>Ready to transform your sales career? Apply now and join a team dedicated to your professional growth and success
+              .</p></div>
+          </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="title-and-copy">
+            <button class="accordion" onclick="toggleAccordion(this)">Remote Sales Performance Analyst</button>
+            <button class="copy-btn-title" onclick="copyTitle('Remote Sales Performance Analyst')">Copy Title</button>
+        </div>
+        <div class="panel">
+            <div class="desc-options">
+
+                <button class="change-desc-btn" onclick="enableEditDesc('desc12')">Change Desc</button>
+                <button class="copy-desc-btn" onclick="copyDesc('desc12', this)">Copy Desc</button>
+            </div>
+            <div id="desc12">
+            <p contenteditable="false"><strong>Take the next step in your career with a forward-thinking company that values growth and success. This remote role is perfect for both seasoned sales professionals and those new to the industry. 
+                Benefit from outstanding support and maximize your earning potential with us.</strong>
+             <strong> Key Responsibilities:</strong><ul>
+              <li>Work closely with experienced mentors in a supportive team environment.</li>
+              <li>Reach out to potential clients by phone to understand their insurance needs.</li>
+              <li>Schedule and conduct virtual consultations (via Zoom or phone) for detailed discussions.</li>
+              <li>Create personalized insurance quotes to meet individual client requirements..</li>
+              <li>Present persuasive sales presentations to secure sales and provide customized solutions..</li></ul>
+             <strong> What We Offer:</strong><ul>
+              <li>A streamlined 3-4 day workweek for improved work-life balance.</li>
+              <li>Free, comprehensive online training and continuous support.</li>
+              <li>Work exclusively with warm leads, no cold calling required.</li>
+              <li>Quick commission payouts with minimal delays.</li>
+              <li>Cutting-edge sales technology provided at no charge.</li>
+              <li>Ongoing professional development with guidance from industry experts.</li>
+              <li>	All-expenses-paid annual incentive trips to premier global destinations.</li></ul>
+              <strong>This is a 1099 commission-based role specializing in financial products such as IULs, annuities, and life insurance, perfect for those looking to expand their expertise and impact.</strong></p>
+              <p>Ready to transform your sales career? Apply now and join a team dedicated to your professional growth and success
+              .</p></div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <div class="title-and-copy">
+            <button class="accordion" onclick="toggleAccordion(this)"> Remote Sales Consultant</button>
+            <button class="copy-btn-title" onclick="copyTitle('Remote Sales Consultant')">Copy Title</button>
+        </div>
+        <div class="panel">
+            <div class="desc-options">
+
+                <button class="change-desc-btn" onclick="enableEditDesc('desc13')">Change Desc</button>
+                <button class="copy-desc-btn" onclick="copyDesc('desc13', this)">Copy Desc</button>
+            </div>
+            <div id="desc13">
+            <p contenteditable="false"><strong>Take the next step in your career with a forward-thinking company that values growth and success. This remote role is perfect for both seasoned sales professionals and those new to the industry. 
+                Benefit from outstanding support and maximize your earning potential with us.</strong>
+             <strong> Key Responsibilities:</strong><ul>
+              <li>Work closely with experienced mentors in a supportive team environment.</li>
+              <li>Reach out to potential clients by phone to understand their insurance needs.</li>
+              <li>Schedule and conduct virtual consultations (via Zoom or phone) for detailed discussions.</li>
+              <li>Create personalized insurance quotes to meet individual client requirements..</li>
+              <li>Present persuasive sales presentations to secure sales and provide customized solutions..</li></ul>
+             <strong> What We Offer:</strong><ul>
+              <li>A streamlined 3-4 day workweek for improved work-life balance.</li>
+              <li>Free, comprehensive online training and continuous support.</li>
+              <li>Work exclusively with warm leads, no cold calling required.</li>
+              <li>Quick commission payouts with minimal delays.</li>
+              <li>Cutting-edge sales technology provided at no charge.</li>
+              <li>Ongoing professional development with guidance from industry experts.</li>
+              <li>	All-expenses-paid annual incentive trips to premier global destinations.</li></ul>
+              <strong>This is a 1099 commission-based role specializing in financial products such as IULs, annuities, and life insurance, perfect for those looking to expand their expertise and impact.</strong></p>
+              <p>Ready to transform your sales career? Apply now and join a team dedicated to your professional growth and success
+              .</p></div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="accordion-item">
+        <div class="title-and-copy">
+            <button class="accordion" onclick="toggleAccordion(this)">Remote Financial Products Specialist</button>
+            <button class="copy-btn-title" onclick="copyTitle(' Remote Financial Products Specialist')">Copy Title</button>
+        </div>
+        <div class="panel">
+            <div class="desc-options">
+
+                <button class="change-desc-btn" onclick="enableEditDesc('desc14')">Change Desc</button>
+                <button class="copy-desc-btn" onclick="copyDesc('desc14', this)">Copy Desc</button>
+            </div>
+            <div id="desc14">
+            <p contenteditable="false"><strong>Take the next step in your career with a forward-thinking company that values growth and success. This remote role is perfect for both seasoned sales professionals and those new to the industry. 
+                Benefit from outstanding support and maximize your earning potential with us.</strong>
+             <strong> Key Responsibilities:</strong><ul>
+              <li>Work closely with experienced mentors in a supportive team environment.</li>
+              <li>Reach out to potential clients by phone to understand their insurance needs.</li>
+              <li>Schedule and conduct virtual consultations (via Zoom or phone) for detailed discussions.</li>
+              <li>Create personalized insurance quotes to meet individual client requirements..</li>
+              <li>Present persuasive sales presentations to secure sales and provide customized solutions..</li></ul>
+             <strong> What We Offer:</strong><ul>
+              <li>A streamlined 3-4 day workweek for improved work-life balance.</li>
+              <li>Free, comprehensive online training and continuous support.</li>
+              <li>Work exclusively with warm leads, no cold calling required.</li>
+              <li>Quick commission payouts with minimal delays.</li>
+              <li>Cutting-edge sales technology provided at no charge.</li>
+              <li>Ongoing professional development with guidance from industry experts.</li>
+              <li>	All-expenses-paid annual incentive trips to premier global destinations.</li></ul>
+              <strong>This is a 1099 commission-based role specializing in financial products such as IULs, annuities, and life insurance, perfect for those looking to expand their expertise and impact.</strong></p>
+              <p>Ready to transform your sales career? Apply now and join a team dedicated to your professional growth and success
+              .</p></div>
+          </div>
+        </div>
+    </div>
+
+
+    
+</div>
+
+<!-- Notification Message -->
+<div id="notification" class="notification"></div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
