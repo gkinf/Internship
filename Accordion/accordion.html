@@ -3,200 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centered Accordion</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f0f0f0;
-    }
-
-    .accordion-container {
-      width: 50%;
-      background-color: #fff;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .accordion {
-      width: 100%;
-      cursor: pointer;
-      padding: 10px;
-      border: 1px solid #ccc;
-      margin: 5px 0;
-      background-color: #f1f1f1;
-      text-align: left;
-      outline: none;
-      transition: background-color 0.2s ease;
-      border-radius: 5px;
-    }
-
-    .accordion.active, .accordion:hover {
-      background-color: #ddd;
-    }
-
-    .panel {
-      display: none;
-      padding: 10px;
-      background-color: white;
-      border-top: none;
-      overflow: hidden;
-      border-radius: 0 0 5px 5px;
-    }
-
-    .copy-btn {
-      margin-top: 10px;
-      padding: 5px 10px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    .copy-btn:hover {
-      background-color: #45a049;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-  </style>
+  <title>Accordion with Copy and Edit</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="accordion-container">
   <h2>Accordion</h2>
 
-  <!-- Accordion Title 1 -->
-  <button class="accordion">Remote Business Growth Strategist</button>
-  <div class="panel">
-    <p id="desc1">This is the description for Title 1.</p>
-    <button class="copy-btn" onclick="copyContent('Title 1', 'desc1')">Copy Title & Description</button>
+  <!-- Accordion Item 1 -->
+  <div class="accordion-item">
+    <div class="accordion" onclick="toggleAccordion(this)">Remote Business Growth Strategist
+      <button class="copy-btn-title" onclick="copyTitle('Remote Business Growth Strategist')">Copy Title</button>
+    </div>
+    <div class="panel">
+      <p id="desc1">This is the description for Title 1.</p>
+      <button class="copy-desc" onclick="copyDesc('desc1')">Copy Description</button>
+      <button class="change-desc-btn" onclick="enableEditDesc('desc1')">Change Desc</button>
+    </div>
   </div>
 
-  <!-- Accordion Title 2 -->
-  <button class="accordion">Virtual Sales Navigator</button>
-  <div class="panel">
-    <p id="desc2">This is the description for Title 2.</p>
-    <button class="copy-btn" onclick="copyContent('Title 2', 'desc2')">Copy Title & Description</button>
+  <!-- Accordion Item 2 -->
+  <div class="accordion-item">
+    <div class="accordion" onclick="toggleAccordion(this)">Virtual Sales Navigator
+      <button class="copy-btn-title" onclick="copyTitle('Virtual Sales Navigator')">Copy Title</button>
+    </div>
+    <div class="panel">
+      <p id="desc2">This is the description for Title 2.</p>
+      <button class="copy-desc" onclick="copyDesc('desc2')">Copy Description</button>
+      <button class="change-desc-btn" onclick="enableEditDesc('desc2')">Change Desc</button>
+    </div>
   </div>
 
-  <!-- Accordion Title 3 -->
-  <button class="accordion"> Remote Sales Operations Specialist</button>
-  <div class="panel">
-    <p id="desc3">This is the description for Title 3.</p>
-    <button class="copy-btn" onclick="copyContent('Title 3', 'desc3')">Copy Title & Description</button>
-  </div>
-
-  <button class="accordion">  Online Customer Engagement Expert</button>
-  <div class="panel">
-    <p id="desc3">This is the description for Title 3.</p>
-    <button class="copy-btn" onclick="copyContent('Title 3', 'desc3')">Copy Title & Description</button>
-  </div>
-  <button class="accordion"> Virtual Market Expansion Consultant</button>
-  <div class="panel">
-    <p id="desc3">This is the description for Title 3.</p>
-    <button class="copy-btn" onclick="copyContent('Title 3', 'desc3')">Copy Title & Description</button>
-  </div>
-  <button class="accordion"> Remote Sales Advisor</button>
-  <div class="panel">
-    <p id="desc3">This is the description for Title 3.</p>
-    <button class="copy-btn" onclick="copyContent('Title 3', 'desc3')">Copy Title & Description</button>
-  </div>
-  <button class="accordion">  Digital Client Relations Manager</button>
-  <div class="panel">
-    <p id="desc3">This is the description for Title 3.</p>
-    <button class="copy-btn" onclick="copyContent('Title 3', 'desc3')">Copy Title & Description</button>
-  </div>
-  <button class="accordion"> Online Sales Innovator</button>
-  <div class="panel">
-    <p id="desc3">This is the description for Title 3.</p>
-    <button class="copy-btn" onclick="copyContent('Title 3', 'desc3')">Copy Title & Description</button>
-  </div>
-  <button class="accordion"> Remote Sales Architect</button>
-  <div class="panel">
-    <p id="desc3">This is the description for Title 3.</p>
-    <button class="copy-btn" onclick="copyContent('Title 3', 'desc3')">Copy Title & Description</button>
-  </div>
-  <button class="accordion"> Virtual Sales Development Specialist</button>
-  <div class="panel">
-    <p id="desc3">This is the description for Title 3.</p>
-    <button class="copy-btn" onclick="copyContent('Title 3', 'desc3')">Copy Title & Description</button>
-  </div>
-  <button class="accordion"> Online Market Penetration Expert</button>
-  <div class="panel">
-    <p id="desc3">This is the description for Title 3.</p>
-    <button class="copy-btn" onclick="copyContent('Title 3', 'desc3')">Copy Title & Description</button>
-  </div>
-  <button class="accordion"> Remote Sales Performance Analyst</button>
-  <div class="panel">
-    <p id="desc3">This is the description for Title 3.</p>
-    <button class="copy-btn" onclick="copyContent('Title 3', 'desc3')">Copy Title & Description</button>
-  </div>
-  <button class="accordion"> Remote Sales Consultant</button>
-  <div class="panel">
-    <p id="desc3">This is the description for Title 3.</p>
-    <button class="copy-btn" onclick="copyContent('Title 3', 'desc3')">Copy Title & Description</button>
-  </div>
-  <button class="accordion">Virtual Insurance Sales Advisor </button>
-  <div class="panel">
-    <p id="desc3">This is the description for Title 3.</p>
-    <button class="copy-btn" onclick="copyContent('Title 3', 'desc3')">Copy Title & Description</button>
-  </div>
-  <button class="accordion"> Remote Financial Products Specialist</button>
-  <div class="panel">
-    <p id="desc3">This is the description for Title 3.</p>
-    <button class="copy-btn" onclick="copyContent('Title 3', 'desc3')">Copy Title & Description</button>
-  </div>
-
+  <!-- Notification -->
+  <div id="notification" class="notification"></div>
 </div>
 
-<script>
-  // JavaScript for Accordion Functionality
-  const accordions = document.querySelectorAll('.accordion');
-
-  accordions.forEach(accordion => {
-    accordion.addEventListener('click', function () {
-      // Toggle active class
-      this.classList.toggle('active');
-
-      // Toggle panel display
-      const panel = this.nextElementSibling;
-      if (panel.style.display === 'block') {
-        panel.style.display = 'none';
-      } else {
-        panel.style.display = 'block';
-      }
-
-      // Change description content on click
-      const panelText = panel.querySelector('p');
-      panelText.innerText = `This is the updated description for ${this.innerText}.`;
-    });
-  });
-
-  // Function to copy title and description
-  function copyContent(title, descId) {
-    const description = document.getElementById(descId).innerText;
-    const textToCopy = `Title: ${title}\nDescription: ${description}`;
-
-    // Copy to clipboard
-    navigator.clipboard.writeText(textToCopy)
-      .then(() => {
-        alert('Title and Description copied!');
-      })
-      .catch(err => {
-        console.error('Error copying text: ', err);
-      });
-  }
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

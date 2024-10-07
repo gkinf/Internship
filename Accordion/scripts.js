@@ -1,24 +1,26 @@
-function copyTitle(title) {
-    const tempInput = document.createElement('input');
-    tempInput.value = title;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand('copy');
-    document.body.removeChild(tempInput);
-    showNotification('Title copied');
+async function copyTitle(title) {
+    try {
+        await navigator.clipboard.writeText(title);
+        showNotification('Title copied');
+    } catch (err) {
+        console.error('Failed to copy title: ', err);
+        showNotification('Failed to copy title');
+    }
 }
 
-function copyDesc(descId) {
+async function copyDesc(descId) {
     const descElement = document.getElementById(descId);
-    const range = document.createRange();
-    range.selectNode(descElement);
-    window.getSelection().removeAllRanges(); // Clear current selection
-    window.getSelection().addRange(range); // Select the text in the element
+    const textToCopy = descElement.innerText;
 
-    document.execCommand('copy'); // Copy the selected text
-    window.getSelection().removeAllRanges(); // Clear selection after copying
-    showNotification('Description copied');
+    try {
+        await navigator.clipboard.writeText(textToCopy);
+        showNotification('Description copied');
+    } catch (err) {
+        console.error('Failed to copy description: ', err);
+        showNotification('Failed to copy description');
+    }
 }
+
 
 function enableEditDesc(descId) {
     const descElement = document.getElementById(descId);
@@ -26,24 +28,35 @@ function enableEditDesc(descId) {
     descElement.focus();
     const range = document.createRange();
     range.selectNodeContents(descElement);
-    range.collapse(false); // Collapse to the end
     const sel = window.getSelection();
     sel.removeAllRanges();
     sel.addRange(range);
     
-    const button = descElement.nextElementSibling.querySelector('.change-desc-btn');
-    button.textContent = 'Save Desc';
-    button.setAttribute('onclick', `saveDesc('${descId}')`);
+    // Instead of using nextElementSibling, directly select the button by class
+    const button = document.querySelector(`button[onclick="enableEditDesc('${descId}')"]`);
+    if (button) { // Check if the button exists
+        button.textContent = 'Save Desc';
+        button.setAttribute('onclick', `saveDesc('${descId}')`);
+    }
 }
+
 
 function saveDesc(descId) {
     const descElement = document.getElementById(descId);
-    descElement.contentEditable = false;
+    descElement.contentEditable = false; // Disable editing
 
-    const button = descElement.nextElementSibling.querySelector('.change-desc-btn');
-    button.textContent = 'Change Desc';
-    button.setAttribute('onclick', `enableEditDesc('${descId}')`);
+    const newDesc = descElement.innerText; // Get updated description
+    localStorage.setItem(descId, newDesc); // Save the new description to local storage
+    showNotification("Description saved!"); // Notify the user
+
+    // Update button text
+    const button = document.querySelector(`button[onclick="enableEditDesc('${descId}')"]`);
+    if (button) { // Check if the button exists
+        button.textContent = 'Change Desc';
+        button.setAttribute('onclick', `enableEditDesc('${descId}')`);
+    }
 }
+
 
 function toggleAccordion(element) {
     const panel = element.parentElement.nextElementSibling;
@@ -59,3 +72,15 @@ function showNotification(message) {
         notification.style.display = 'none';
     }, 3000);
 }
+
+// Load descriptions from local storage when the page loads
+document.addEventListener('DOMContentLoaded', (event) => {
+    const descElements = document.querySelectorAll('.desc');
+    descElements.forEach((element) => {
+        const id = element.id; // Assuming each description element has a unique ID
+        const storedDesc = localStorage.getItem(id);
+        if (storedDesc) {
+            element.innerText = storedDesc; // Update the content with the stored description
+        }
+    });
+});
